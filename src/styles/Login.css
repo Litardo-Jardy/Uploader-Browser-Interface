@@ -1,0 +1,43 @@
+.ContainerLogin{
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.text-title-login{
+  margin: 20px;
+}
+
+.text-login{
+  font-weight: 700;
+  font-size: 27px;
+}
+
+.ContainerLogin .ant-form-item-label > label {
+  color: var(--text-h);
+  width: auto;
+}
+
+.ant-input-password, 
+.ant-input-password:hover, 
+.ant-input-password:active,
+.ant-input:focus, 
+.ant-input,
+.ant-input-status-error, 
+.ant-input:hover, 
+.ant-input:active,
+.ant-input-password:focus {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
+  border-radius: 0;
+  color: #fff;
+}
+
+.ant-input-password::placeholder, .ant-input::placeholder{
+ color: #9ca3af;
+}
