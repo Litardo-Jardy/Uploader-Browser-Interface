@@ -1,0 +1,158 @@
+/* ===== BASE: Contenedor de notificación ===== */
+.ant-notification-notice.custom-notification {
+  background-color: #1a2a4a;
+  border-radius: 8px;
+  padding: 16px 20px;
+  border-left: 5px solid #3b5bdb;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+  min-width: 150px;
+  max-width: 700px;
+  display: flex;
+  align-items: center;
+  height: 70px;
+}
+
+/* ===== TIPOGRAFÍA ===== */
+.ant-notification-notice.custom-notification .ant-notification-notice-title {
+  color: #fff !important;
+  font-weight: 600;
+  font-size: 18px !important;
+  margin-bottom: 2px;
+  position: relative;
+  bottom: -7px;
+}
+
+.ant-notification-notice.custom-notification .ant-notification-notice-description {
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-size: 13px !important;
+  font-weight: 400;
+  position: relative;
+  top: -4px;
+}
+
+/* ===== ICONO ===== */
+.ant-notification-notice.custom-notification .ant-notification-notice-icon {
+  font-size: 22px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.15);
+  margin-top: 17px;
+  flex-shrink: 0;
+}
+
+/* ===== BOTÓN DE ACCIÓN (btn en el description o extra) ===== */
+.ant-notification-notice.custom-notification .custom-notification-btn {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 4px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+  position: relative;
+  bottom: 15px;
+  left: 50px;
+}
+
+.ant-notification-notice.custom-notification .custom-notification-btn:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* ===== CERRAR (X) ===== */
+.ant-notification-notice.custom-notification .ant-notification-notice-close {
+  color: rgba(255, 255, 255, 0.5) !important;
+  top: 12px;
+  right: 12px;
+  font-size: 0;
+}
+
+.ant-notification-notice.custom-notification .ant-notification-notice-close:hover {
+  color: #fff !important;
+}
+
+/* ========================================
+   VARIANTES POR TIPO
+   Aplica la clase junto a custom-notification
+   ej: className="custom-notification custom-notification--info"
+   ======================================== */
+
+/* INFO — azul oscuro */
+.ant-notification-notice.custom-notification.custom-notification--info {
+  background-color: #1a2a4a;
+  border-left-color: #3b5bdb;
+}
+
+.ant-notification-notice.custom-notification.custom-notification--info
+  .ant-notification-notice-icon {
+  color: #7c9ef5;
+}
+
+/* SUCCESS — verde oscuro */
+.ant-notification-notice.custom-notification.custom-notification--success {
+  background-color: #1a3a2a;
+  border-left-color: #2e7d4f;
+}
+
+.ant-notification-notice.custom-notification.custom-notification--success
+  .ant-notification-notice-icon {
+  color: #6fcf97;
+}
+
+.ant-notification-notice.custom-notification.custom-notification--success
+  .custom-notification-btn {
+  background-color: #2e7d4f;
+}
+
+.ant-notification-notice.custom-notification.custom-notification--success
+  .custom-notification-btn:hover {
+  background-color: #3a9e64;
+}
+
+/* ERROR — rojo oscuro */
+.ant-notification-notice.custom-notification.custom-notification--error {
+  background-color: #3a1212;
+  border-left-color: #c0392b;
+}
+
+.ant-notification-notice.custom-notification.custom-notification--error
+  .ant-notification-notice-icon {
+  color: #e57373;
+}
+
+.ant-notification-notice.custom-notification.custom-notification--error
+  .custom-notification-btn {
+  background-color: #c0392b;
+}
+
+.ant-notification-notice.custom-notification.custom-notification--error
+  .custom-notification-btn:hover {
+  background-color: #e53935;
+}
+
+/* WARNING — naranja/marrón oscuro */
+.ant-notification-notice.custom-notification.custom-notification--warning {
+  background-color: #3a2400;
+  border-left-color: #e67e22;
+}
+
+.ant-notification-notice.custom-notification.custom-notification--warning
+  .ant-notification-notice-icon {
+  color: #f0a500;
+}
+
+.ant-notification-notice.custom-notification.custom-notification--warning
+  .custom-notification-btn {
+  background-color: #9a5a00;
+}
+
+.ant-notification-notice.custom-notification.custom-notification--warning
+  .custom-notification-btn:hover {
+  background-color: #c47000;
+}

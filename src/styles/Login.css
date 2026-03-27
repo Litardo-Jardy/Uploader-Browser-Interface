@@ -1,26 +1,23 @@
 .ContainerLogin{
   display: flex;
   flex-direction: column;
-  margin: 10px;
   text-align: center;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-}
+  position: relative;
+  bottom: 17px;
+  height: 100vh}
 
 .text-title-login{
-  margin: 20px;
-}
+  margin-bottom: 40px;}
 
 .text-login{
   font-weight: 700;
-  font-size: 27px;
-}
+  font-size: 25px}
 
 .ContainerLogin .ant-form-item-label > label {
   color: var(--text-h);
-  width: auto;
-}
+  width: auto}
 
 .ant-input-password, 
 .ant-input-password:hover, 
@@ -35,9 +32,33 @@
   border: none;
   border-bottom: 1px solid #fff;
   border-radius: 0;
-  color: #fff;
+  color: #fff}
+
+.ant-input-password::placeholder, 
+.ant-input::placeholder{
+ color: #9ca3af}
+
+.ContainerLogin .ant-btn-primary {
+  background: linear-gradient(135deg, #38bdf8 , #7a25c2);
+  border: none;
+  color: white;
+  border-radius: 6px;
+  height: 36px;
+  margin-top: 10px;
+  width: 260px;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
-.ant-input-password::placeholder, .ant-input::placeholder{
- color: #9ca3af;
+.ContainerLogin .ant-btn-primary:hover {
+  background: linear-gradient(135deg, #922de0, #6a1fb0);
+}
+
+.ContainerLogin .ant-btn-primary:active {
+  transform: scale(0.98);
+}
+
+.icon-gradient {
+  background: linear-gradient(135deg, #38bdf8, #8b5cf6);
+  color: red;
 }

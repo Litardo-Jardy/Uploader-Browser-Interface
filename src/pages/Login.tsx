@@ -3,26 +3,43 @@ import type { FormProps } from 'antd';
 import { Button, Form, Input } from 'antd';
 import { FaRegUser } from "react-icons/fa";
 import { FiLock } from "react-icons/fi";
+import type { LoginRequest } from '../types/auth';
+import { login } from '../api/auth';
+import { useNotification } from '../hooks/useNotification'; 
+import { UploaderBrowserLogo } from '../shared/icons';
 
-type FieldType = {
-  username?: string;
-  password?: string;
-  remember?: string;
-};
-
-const onFinish: FormProps<FieldType>['onFinish'] = (values) => {
-  console.log('Success:', values);
-};
-
-const onFinishFailed: FormProps<FieldType>['onFinishFailed'] = (errorInfo) => {
-  console.log('Failed:', errorInfo);
-};
 
 export const Login = () => {
+
+   const { open } = useNotification();
+
+const onFinish: FormProps<LoginRequest>['onFinish'] = async (values) => {
+  try{
+     const res = await login(values);
+
+     localStorage.setItem("token", res.token);
+     localStorage.setItem("user", res.user_name);
+
+     open("success", "Éxito", "Inicio de sesion con exito");
+  } catch(err){
+     if (err instanceof Error) {
+        console.error(err.message);
+	open("error", "Error", "Credenciales incorrectas");
+     } else {
+       console.error("Error desconocido")}
+  }
+};
+
+const onFinishFailed: FormProps<LoginRequest>['onFinishFailed'] = (errorInfo) => {
+  console.log('Failed:', errorInfo);
+  open("error", "Error", "Los campos estan vacios")
+};
+
    return(
       <div className='ContainerLogin'>
            <div className='text-title-login'> 
-              <h2 className='text-login'>Iniciar Sesion</h2>
+              <UploaderBrowserLogo width={100} height={100} /> 
+	      <h2 className='text-login'>Uploader-Browser</h2>
 	   </div>
          <Form
             name="vertical"
@@ -33,16 +50,16 @@ export const Login = () => {
             onFinish={onFinish}
             onFinishFailed={onFinishFailed}
             autoComplete="off">
-                <Form.Item<FieldType>
-                   label={<FaRegUser />}
-                   name="username"
+                <Form.Item<LoginRequest>
+                   label={<FaRegUser color='#38bdf8'/>}
+                   name="user"
                    rules={[{ required: true, message: 'Por favor introduzca su usuario' }]}>
                    <Input placeholder='Ingresar usuario' />
                  </Form.Item>
 
-                 <Form.Item<FieldType>
-                   label={<FiLock />}
-                   name="password"
+                 <Form.Item<LoginRequest>
+                   label={<FiLock color='#38bdf8' />}
+                   name="pass"
                    rules={[{ required: true, message: 'Por favor introduzca su contraseña' }]}>
                    <Input.Password placeholder='Ingresar contraseña' />
                  </Form.Item>

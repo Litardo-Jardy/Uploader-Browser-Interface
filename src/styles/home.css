@@ -1,0 +1,31 @@
+.ant-layout {
+    background-color: var(--bg);
+}
+
+.ant-layout-header  {
+    background-color: var(--bg-surface);
+}
+
+
+.ant-layout-sider-children{
+    background-color: var(--bg-surface);
+}
+
+.ant-menu {
+    background-color: var(--bg-surface);
+}
+
+.container-content{
+    background-color: var(--bg-surface);
+    color: var(--text-primary);
+}
+
+.ant-layout-footer {
+    background-color: var(--bg);
+    font-size: 8px; 
+    padding: 2px;
+    color: var(--text-primary)
+}
+
+
+
