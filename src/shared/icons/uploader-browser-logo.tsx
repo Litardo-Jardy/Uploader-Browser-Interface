@@ -1,9 +1,6 @@
 import '../../styles/icons.css'
+import type { LogoProps } from '../../types/icons';
 
-interface LogoProps {
-  width?: number
-  height?: number
-  size?: number}
 
 const UploaderBrowserLogo = ({ width, height, size }: LogoProps) => (
   <svg
@@ -28,3 +25,4 @@ const UploaderBrowserLogo = ({ width, height, size }: LogoProps) => (
 )
 
 export { UploaderBrowserLogo };
+

@@ -1,0 +1,7 @@
+/* ── Footer ── */
+.ant-layout-footer {
+    background-color: var(--bg);
+    font-size: 8px; 
+    padding: 2px;
+    color: var(--text-primary)
+}

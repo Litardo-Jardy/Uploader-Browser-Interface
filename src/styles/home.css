@@ -17,107 +17,11 @@
     color: var(--text-primary);
 }
 
-.ant-layout-footer {
-    background-color: var(--bg);
-    font-size: 8px; 
-    padding: 2px;
-    color: var(--text-primary)
-}
-
-
 
 /* ── Layout general ── */
 .ant-layout {
   min-height: 100svh;
   background: var(--bg) !important;
-}
-
-/* ── Sider ── */
-.app-sider.ant-layout-sider {
-  background: var(--bg-surface) !important;
-  border-right: 1px solid var(--border) !important;
-  padding: 20px 0;
-  display: flex;
-  flex-direction: column;
-}
-
-.ant-layout-sider-children {
-  display: flex;
-  flex-direction: column;
-}
-
-/* ── Brand / logo ── */
-.sider-brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 0 20px 20px;
-  border-bottom: 1px solid var(--border);
-  margin-bottom: 8px;
-}
-
-.sider-brand-name {
-  color: var(--text-primary);
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: -0.2px;
-  white-space: nowrap;
-  text-align: center;
-  width: 200px ;
-}
-
-/* ── Título de sección ── */
-.sider-section-title {
-  color: var(--text-secondary);
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.8px;
-  text-transform: uppercase;
-  padding: 12px 20px 4px;
-  margin: 0;
-}
-
-/* ── Divisor ── */
-.sider-divider {
-  height: 1px;
-  background: var(--border);
-  margin: 8px 16px;
-}
-
-/* ── Menú ── */
-.sider-menu.ant-menu {
-  background: transparent !important;
-  border: none !important;
-  padding: 0 8px;
-}
-
-.sider-menu .ant-menu-item {
-  border-radius: 8px !important;
-  color: var(--text-secondary) !important;
-  margin: 2px 0 !important;
-  height: 42px !important;
-  line-height: 42px !important;
-  transition: all 0.15s ease !important;
-}
-
-.sider-menu .ant-menu-item:hover {
-  background: var(--bg-elevated) !important;
-  color: var(--text-primary) !important;
-}
-
-.sider-menu .ant-menu-item-selected {
-  background: rgba(124, 109, 255, 0.12) !important;
-  color: var(--accent) !important;
-}
-
-.sider-menu .ant-menu-item-selected .ant-menu-item-icon,
-.sider-menu .ant-menu-item-selected .anticon {
-  color: var(--accent) !important;
-}
-
-.sider-menu .ant-menu-item .anticon {
-  font-size: 16px !important;
-  transition: color 0.15s ease;
 }
 
 /* ── Content ── */
@@ -126,11 +30,4 @@
   border: 1px solid var(--border);
 }
 
-/* ── Footer ── */
-.ant-layout-footer {
-    background-color: var(--bg);
-    font-size: 8px; 
-    padding: 2px;
-    color: var(--text-primary)
-}
 

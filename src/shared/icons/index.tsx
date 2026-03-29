@@ -1,1 +1,8 @@
+export { HomeRouteIcon } from './home-route-icon';
+export { FolderUploadIcon } from './create-folder-icon';
+export { UploadIcon } from './upload-file-icon';
+export { PhotoIcon } from './photo-icon';
+export { VideoIcon } from './video-icon';
+export { DocumentIcon } from './document-icon';
+export { ListIcon } from './list-menu-icon';
 export { UploaderBrowserLogo } from './uploader-browser-logo';
