@@ -6,3 +6,4 @@ export { VideoIcon } from './video-icon';
 export { DocumentIcon } from './document-icon';
 export { ListIcon } from './list-menu-icon';
 export { UploaderBrowserLogo } from './uploader-browser-logo';
+export { LogOutIcon } from './logout-icon'

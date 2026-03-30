@@ -28,7 +28,8 @@
   font-weight: 600;
   letter-spacing: -0.2px;
   white-space: nowrap;
-  text-align: center;
+  position: relative;
+  left: 10px;
   width: 200px ;
 }
 
@@ -112,4 +113,37 @@
 .sider-menu .ant-menu-item .anticon {
   font-size: 16px !important;
   transition: color 0.15s ease;
+}
+
+/* --- Logout ---- */ 
+.sider-logout {
+  margin-top: auto;
+  padding: 2px 12px;
+  border-top: 1px solid var(--border);
+}
+
+.sider-logout-btn {
+  width: 100%;
+  padding: 9px 0;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  position: relative;
+  top: 10px;
+}
+
+.sider-logout-btn:hover {
+  background: rgba(240, 92, 110, 0.08);
+  border-color: #f05c6e;
+  color: #f05c6e;
+}
+
+.icon-log-out {
+  position: relative;
+  top: 10px;
 }

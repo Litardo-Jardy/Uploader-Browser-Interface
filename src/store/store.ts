@@ -1,8 +1,11 @@
-import { configureStore } from '@reduxjs/toolkit'
+import { configureStore } from '@reduxjs/toolkit';
+import filterReducer from './slice/filter.slice';
+import pathReducer from './slice/path.slice.ts';
 
 export const store = configureStore({
   reducer: {
-    // aquí irás agregando tus slices
+    filter: filterReducer, 
+    path: pathReducer,
   },
 })
 
