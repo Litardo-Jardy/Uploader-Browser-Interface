@@ -7,10 +7,12 @@ import { UploadIcon } from '../shared/icons';
 import FileItem from '../shared/components/Uploader/FileItem';
 import { useState } from 'react';
 import type { UploadFile } from 'antd'
+import { uploadFile } from '../api/uploadFile';
 
 const Home = () => {
    const [files, setFiles] = useState<UploadFile[]>([])
-   const { Dragger } = Upload
+   console.log(files);
+   const { Dragger } = Upload;
    const { Content } = Layout;
 
   return (
@@ -30,6 +32,19 @@ const Home = () => {
             <Dragger className="uploader-dragger" 
 	      multiple
               fileList={files}
+	      customRequest={ async ({ file, onProgress, onSuccess, onError  }) => {
+                 try {
+                    await uploadFile(
+                      file as File,
+		      "*",
+		      (percent) => {
+                        onProgress?.({ percent })
+		      });
+		    onSuccess?.("ok");
+		 } catch(err) {
+                    onError?.(err as Error);
+		 }
+	      }} 
 	      onChange={({ fileList }) => {
                             setFiles(fileList.map(f => ({
                                       ...f,

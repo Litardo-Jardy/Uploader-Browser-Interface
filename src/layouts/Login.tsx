@@ -8,15 +8,14 @@ import { login } from '../api/auth';
 import { useNotification } from '../hooks/useNotification'; 
 import { UploaderBrowserLogo } from '../shared/icons';
 
-
 export const Login = () => {
 
    const { open } = useNotification();
 
 const onFinish: FormProps<LoginRequest>['onFinish'] = async (values) => {
-  try{
+  try{ 
      const res = await login(values);
-
+    
      localStorage.setItem("token", res.token);
      localStorage.setItem("user", res.user_name);
 
