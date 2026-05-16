@@ -26,18 +26,25 @@ const statusLabel = {
 
 const FileItem = ({ name, size, progress, status, type }: FileItemProps) => (
   <div className={`file-item ${status === 'error' ? 'file-item--error' : ''}`}>
+
     <div className={`file-icon file-icon--${type}`}>
       {iconMap[type]}
     </div>
+
     <div className="file-info">
+     
       <span className="file-name">{name}</span>
+     
       <div className="file-meta">
         <span>{size}</span>
         <span>·</span>
+
         <span className={`file-status--${status}`}>
           {statusLabel[status](progress)}
         </span>
+
       </div>
+
       <div className="file-progress">
         <div
           className={`file-progress-fill file-progress-fill--${status === 'uploading' ? '' : status}`}
