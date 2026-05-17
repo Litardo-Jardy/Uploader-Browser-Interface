@@ -31,6 +31,7 @@ const Home = () => {
 
             <Dragger className="uploader-dragger" 
 	      multiple
+	      showUploadList={false}
               fileList={files}
 	      customRequest={ async ({ file, onProgress, onSuccess, onError  }) => {
                  try {
@@ -63,7 +64,7 @@ const Home = () => {
             </div>
 
             <div className="uploader-files">
-                {files.map((file) => (
+                {[...files].reverse().map((file) => (
                   <FileItem
                     key={file.uid}
                     name={file.name}
